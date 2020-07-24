@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #fff3dc;
+  background-color: #e2e2e2;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -22,12 +22,18 @@
 
 h3{
   min-width: 100%;
-  margin: 0 auto;
+  margin: 0.2rem auto;
+}
+label{
+  font-weight: 400;
 }
 
 input{
   display: block;
-  width: 100%;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid rgb(200, 200, 200);
 }
 
 .btn{
@@ -37,6 +43,7 @@ input{
   padding: 10px;
   display: block;
   width: 100%;
+  background-color: aquamarine;
 }
 
 .form-control{
@@ -46,9 +53,22 @@ input{
 .section{
   margin-top: 1.5em;
 }
-.section-header{
-  
+.header-section{
+  margin: 0.5rem 0;
   border-bottom: 1px solid #bbb;
 }
 
+.item-history{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.item-status{
+  width: 2px;
+  background-color: green;
+}
+.item{
+  margin: 0.5em;
+}
 
