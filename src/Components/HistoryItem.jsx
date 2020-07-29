@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TransactionContext } from './TransactionProvider';
 
-export default function HistoryItem({ name, amount }) {
+export default function HistoryItem({ transaction }) {
+    const { deleteTransaction } = useContext(TransactionContext);
+
+    const sign = transaction.amount > 0 ? '+' : '-';
+
     return (
-        <div className="item-history">
-            <div className="item">
-                <label htmlFor="" className="label-name">{name}</label>
-            </div>
-            <div className="item">
-                <label htmlFor="" className="label-amount">{amount}</label>
-            </div>
-            <div className="item-status">
-
-            </div>
-        </div>
+        <li className={transaction.amount < 0 ? "minus" : "plus"}>
+            {transaction.text}<span>{`${sign}$${Math.abs(transaction.amount)}.00`}</span>
+            <button className="delete-btn" onClick={() => deleteTransaction(transaction.id)}>x</button>
+        </li>
     )
 }

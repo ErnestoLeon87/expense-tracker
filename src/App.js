@@ -1,17 +1,20 @@
 import React from 'react';
-import './App.css';
+import './Main.css';
 import AddTransactionForm from './Components/AddTransactionForm';
 import History from './Components/History';
 import TransactionProvider from './Components/TransactionProvider';
 import Balance from './Components/Balance';
+import { Header } from './Components/Header';
+import { IncomeExpenses } from './Components/IncomeExpenses';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <TransactionProvider>
         <div>
-          <h3>Expense Tracker</h3>
+          <Header />
           <Balance />
+          <IncomeExpenses />
           <History />
           <AddTransactionForm />
         </div>
